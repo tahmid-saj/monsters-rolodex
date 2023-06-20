@@ -1,4 +1,4 @@
-import { Component, ChangeEventHandler } from 'react';
+import { Component, ChangeEvent, ChangeEventHandler } from 'react';
 import './search-box.styles.css';
 
 // const name: string = '1234561';
@@ -18,7 +18,8 @@ import './search-box.styles.css';
 type SearchBoxProps = {
     className: string,
     placeholder?: string;
-    onChangeHandler: ChangeEventHandler<HTMLInputElement>;
+    // func: ChangeEventHandler, // Means same thing as onChangeHandler
+    onChangeHandler: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
 // type CanadianAddress = {
